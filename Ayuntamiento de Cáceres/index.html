@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuntamiento de Cáceres</title>
+    <link rel="icon" href="img/ayun.ico" type="image/x-icon">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="bg-danger text-white py-3">
+        <div class="container d-flex align-items-center">
+            <img src="img/ayun.png" alt="Logo del Ayuntamiento de Cáceres" class="logo me-3">
+            <h1 class="m-0">
+                <span class="lang lang-es">Ayuntamiento de Cáceres</span>
+                <span class="lang lang-en d-none">Cáceres City Hall</span>
+                <span class="lang lang-pt d-none">Prefeitura de Cáceres</span>
+                <span class="lang lang-fr d-none">Mairie de Cáceres</span>
+            </h1>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html"><span class="lang lang-es">Inicio</span><span class="lang lang-en d-none">Home</span><span class="lang lang-pt d-none">Início</span><span class="lang lang-fr d-none">Accueil</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="agenda.html"><span class="lang lang-es">Agenda Cultural</span><span class="lang lang-en d-none">Cultural Agenda</span><span class="lang lang-pt d-none">Agenda Cultural</span><span class="lang lang-fr d-none">Agenda Culturelle</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="turismo.html"><span class="lang lang-es">Turismo</span><span class="lang lang-en d-none">Tourism</span><span class="lang lang-pt d-none">Turismo</span><span class="lang lang-fr d-none">Tourisme</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="imagenes.html"><span class="lang lang-es">Imágenes</span><span class="lang lang-en d-none">Images</span><span class="lang lang-pt d-none">Imagens</span><span class="lang lang-fr d-none">Images</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="noMina.html"><span class="lang lang-es">No a la mina</span><span class="lang lang-en d-none">No to the mine</span><span class="lang lang-pt d-none">Não à mina</span><span class="lang lang-fr d-none">Non à la mine</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html"><span class="lang lang-es">Contacto</span><span class="lang lang-en d-none">Contact</span><span class="lang lang-pt d-none">Contato</span><span class="lang lang-fr d-none">Contact</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Barra de búsqueda -->
+        <div class="search-bar-container text-center my-4">
+            <input type="text" id="searchInput" placeholder="Buscar..." class="search-bar">
+            <button onclick="buscar()" class="search-button btn btn-primary">
+                <span class="lang lang-es">Buscar</span>
+                <span class="lang lang-en d-none">Search</span>
+                <span class="lang lang-pt d-none">Buscar</span>
+                <span class="lang lang-fr d-none">Rechercher</span>
+            </button>
+        </div>
+        <!-- Menú desplegable de idiomas -->
+        <div class="dropdown text-center my-4">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                Español
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('es')">Español</a></li>
+                <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('en')">Inglés</a></li>
+                <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('pt')">Portugués</a></li>
+                <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('fr')">Francés</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <!-- Sección Hero -->
+        <section class="hero text-center bg-danger text-white py-5">
+            <div class="container">
+                <h2 class="mb-4">
+                    <span class="lang lang-es">Bienvenidos al Ayuntamiento de Cáceres</span>
+                    <span class="lang lang-en d-none">Welcome to Cáceres City Hall</span>
+                    <span class="lang lang-pt d-none">Bem-vindo à Prefeitura de Cáceres</span>
+                    <span class="lang lang-fr d-none">Bienvenue à la Mairie de Cáceres</span>
+                </h2>
+                <p class="lead">
+                    <span class="lang lang-es">Descubre todo lo que nuestra ciudad tiene para ofrecer: cultura, turismo, eventos y mucho más.</span>
+                    <span class="lang lang-en d-none">Discover everything our city has to offer: culture, tourism, events and much more.</span>
+                    <span class="lang lang-pt d-none">Descubra tudo o que nossa cidade tem para oferecer: cultura, turismo, eventos e muito mais.</span>
+                    <span class="lang lang-fr d-none">Découvrez tout ce que notre ville a à offrir : culture, tourisme, événements et bien plus encore.</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- Sección Destacados -->
+        <section class="highlights py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="highlight text-center p-4 bg-light rounded shadow">
+                            <img src="img/agenda.jpg" alt="Agenda Cultural" class="img-fluid rounded mb-3">
+                            <h3 class="text-danger">
+                                <span class="lang lang-es">Agenda Cultural</span>
+                                <span class="lang lang-en d-none">Cultural Agenda</span>
+                                <span class="lang lang-pt d-none">Agenda Cultural</span>
+                                <span class="lang lang-fr d-none">Agenda Culturelle</span>
+                            </h3>
+                            <p>
+                                <span class="lang lang-es">Consulta los eventos más destacados de nuestra ciudad.</span>
+                                <span class="lang lang-en d-none">Check out the most important events in our city.</span>
+                                <span class="lang lang-pt d-none">Confira os eventos mais importantes da nossa cidade.</span>
+                                <span class="lang lang-fr d-none">Découvrez les événements les plus importants de notre ville.</span>
+                            </p>
+                            <a href="agenda.html" class="btn btn-danger">
+                                <span class="lang lang-es">Ver más</span>
+                                <span class="lang lang-en d-none">See more</span>
+                                <span class="lang lang-pt d-none">Ver mais</span>
+                                <span class="lang lang-fr d-none">Voir plus</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="highlight text-center p-4 bg-light rounded shadow">
+                            <img src="img/turismo.png" alt="Turismo" class="img-fluid rounded mb-3">
+                            <h3 class="text-danger">
+                                <span class="lang lang-es">Turismo</span>
+                                <span class="lang lang-en d-none">Tourism</span>
+                                <span class="lang lang-pt d-none">Turismo</span>
+                                <span class="lang lang-fr d-none">Tourisme</span>
+                            </h3>
+                            <p>
+                                <span class="lang lang-es">Explora los lugares más emblemáticos de Cáceres.</span>
+                                <span class="lang lang-en d-none">Explore the most emblematic places in Cáceres.</span>
+                                <span class="lang lang-pt d-none">Explore os lugares mais emblemáticos de Cáceres.</span>
+                                <span class="lang lang-fr d-none">Découvrez les lieux les plus emblématiques de Cáceres.</span>
+                            </p>
+                            <a href="turismo.html" class="btn btn-danger">
+                                <span class="lang lang-es">Descubrir</span>
+                                <span class="lang lang-en d-none">Discover</span>
+                                <span class="lang lang-pt d-none">Descobrir</span>
+                                <span class="lang lang-fr d-none">Découvrir</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="highlight text-center p-4 bg-light rounded shadow">
+                            <img src="img/galeria.jpg" alt="Galería" class="img-fluid rounded mb-3">
+                            <h3 class="text-danger">
+                                <span class="lang lang-es">Galería</span>
+                                <span class="lang lang-en d-none">Gallery</span>
+                                <span class="lang lang-pt d-none">Galeria</span>
+                                <span class="lang lang-fr d-none">Galerie</span>
+                            </h3>
+                            <p>
+                                <span class="lang lang-es">Disfruta de las mejores imágenes de nuestra ciudad.</span>
+                                <span class="lang lang-en d-none">Enjoy the best images of our city.</span>
+                                <span class="lang lang-pt d-none">Aprecie as melhores imagens da nossa cidade.</span>
+                                <span class="lang lang-fr d-none">Profitez des plus belles images de notre ville.</span>
+                            </p>
+                            <a href="imagenes.html" class="btn btn-danger">
+                                <span class="lang lang-es">Ver galería</span>
+                                <span class="lang lang-en d-none">See gallery</span>
+                                <span class="lang lang-pt d-none">Ver galeria</span>
+                                <span class="lang lang-fr d-none">Voir la galerie</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Noticias -->
+        <section class="news py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center text-danger mb-4">
+                    <span class="lang lang-es">Últimas Noticias</span>
+                    <span class="lang lang-en d-none">Latest News</span>
+                    <span class="lang lang-pt d-none">Últimas Notícias</span>
+                    <span class="lang lang-fr d-none">Dernières Nouvelles</span>
+                </h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="news-item p-3 bg-white rounded shadow">
+                            <h4 class="text-danger">
+                                <span class="lang lang-es">Nueva exposición en el museo</span>
+                                <span class="lang lang-en d-none">New exhibition at the museum</span>
+                                <span class="lang lang-pt d-none">Nova exposição no museu</span>
+                                <span class="lang lang-fr d-none">Nouvelle exposition au musée</span>
+                            </h4>
+                            <p>
+                                <span class="lang lang-es">Descubre la nueva exposición de arte contemporáneo en el museo de Cáceres.</span>
+                                <span class="lang lang-en d-none">Discover the new contemporary art exhibition at the Cáceres museum.</span>
+                                <span class="lang lang-pt d-none">Descubra a nova exposição de arte contemporânea no museu de Cáceres.</span>
+                                <span class="lang lang-fr d-none">Découvrez la nouvelle exposition d'art contemporain au musée de Cáceres.</span>
+                            </p>
+                            <a href="noticias.html" class="btn btn-danger btn-sm">
+                                <span class="lang lang-es">Leer más</span>
+                                <span class="lang lang-en d-none">Read more</span>
+                                <span class="lang lang-pt d-none">Ler mais</span>
+                                <span class="lang lang-fr d-none">En savoir plus</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="news-item p-3 bg-white rounded shadow">
+                            <h4 class="text-danger">
+                                <span class="lang lang-es">Festival de música</span>
+                                <span class="lang lang-en d-none">Music festival</span>
+                                <span class="lang lang-pt d-none">Festival de música</span>
+                                <span class="lang lang-fr d-none">Festival de musique</span>
+                            </h4>
+                            <p>
+                                <span class="lang lang-es">Prepárate para disfrutar del festival de música que se celebrará este fin de semana.</span>
+                                <span class="lang lang-en d-none">Get ready to enjoy the music festival taking place this weekend.</span>
+                                <span class="lang lang-pt d-none">Prepare-se para curtir o festival de música que acontecerá neste fim de semana.</span>
+                                <span class="lang lang-fr d-none">Préparez-vous à profiter du festival de musique qui aura lieu ce week-end.</span>
+                            </p>
+                            <a href="noticias.html" class="btn btn-danger btn-sm">
+                                <span class="lang lang-es">Leer más</span>
+                                <span class="lang lang-en d-none">Read more</span>
+                                <span class="lang lang-pt d-none">Ler mais</span>
+                                <span class="lang lang-fr d-none">En savoir plus</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="news-item p-3 bg-white rounded shadow">
+                            <h4 class="text-danger">
+                                <span class="lang lang-es">Obras en la Plaza Mayor</span>
+                                <span class="lang lang-en d-none">Works in the Plaza Mayor</span>
+                                <span class="lang lang-pt d-none">Obras na Plaza Mayor</span>
+                                <span class="lang lang-fr d-none">Travaux sur la Plaza Mayor</span>
+                            </h4>
+                            <p>
+                                <span class="lang lang-es">Se han iniciado las obras de remodelación en la Plaza Mayor de Cáceres.</span>
+                                <span class="lang lang-en d-none">Remodeling works have begun in the Plaza Mayor of Cáceres.</span>
+                                <span class="lang lang-pt d-none">Começaram as obras de remodelação na Plaza Mayor de Cáceres.</span>
+                                <span class="lang lang-fr d-none">Les travaux de rénovation ont commencé sur la Plaza Mayor de Cáceres.</span>
+                            </p>
+                            <a href="noticias.html" class="btn btn-danger btn-sm">
+                                <span class="lang lang-es">Leer más</span>
+                                <span class="lang lang-en d-none">Read more</span>
+                                <span class="lang lang-pt d-none">Ler mais</span>
+                                <span class="lang lang-fr d-none">En savoir plus</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Sección No a la mina de Cáceres -->
+        <section class="no-mina py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center text-danger mb-4">
+                    <span class="lang lang-es">No a la mina de Cáceres</span>
+                    <span class="lang lang-en d-none">No to the Cáceres mine</span>
+                    <span class="lang lang-pt d-none">Não à mina de Cáceres</span>
+                    <span class="lang lang-fr d-none">Non à la mine de Cáceres</span>
+                </h2>
+                <p class="lead text-center">
+                    <span class="lang lang-es">Cáceres y sus habitantes se oponen firmemente al proyecto de minería en la región. Este proyecto amenaza el patrimonio natural, cultural y social de una ciudad declarada Patrimonio de la Humanidad por la UNESCO.</span>
+                    <span class="lang lang-en d-none">Cáceres and its inhabitants firmly oppose the mining project in the region. This project threatens the natural, cultural, and social heritage of a city declared a UNESCO World Heritage Site.</span>
+                    <span class="lang lang-pt d-none">Cáceres e seus habitantes se opõem firmemente ao projeto de mineração na região. Este projeto ameaça o patrimônio natural, cultural e social de uma cidade declarada Patrimônio Mundial da UNESCO.</span>
+                    <span class="lang lang-fr d-none">Cáceres et ses habitants s'opposent fermement au projet minier dans la région. Ce projet menace le patrimoine naturel, culturel et social d'une ville classée au patrimoine mondial de l'UNESCO.</span>
+                </p>
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img src="img/noMina.jpg" alt="No a la mina de Cáceres" class="img-fluid rounded shadow">
+                    </div>
+                    <div class="col-md-6">
+                        <p class="lead">
+                            <span class="lang lang-es">La mina a cielo abierto pondría en peligro los recursos hídricos, la biodiversidad y la calidad de vida de los cacereños. Además, afectaría negativamente al turismo y al entorno natural que rodea la ciudad.</span>
+                            <span class="lang lang-en d-none">The open-pit mine would endanger water resources, biodiversity, and the quality of life of the people of Cáceres. It would also negatively affect tourism and the natural environment surrounding the city.</span>
+                            <span class="lang lang-pt d-none">A mina a céu aberto colocaria em risco os recursos hídricos, a biodiversidade e a qualidade de vida dos habitantes de Cáceres. Além disso, afetaria negativamente o turismo e o ambiente natural que rodeia a cidade.</span>
+                            <span class="lang lang-fr d-none">La mine à ciel ouvert mettrait en danger les ressources en eau, la biodiversité et la qualité de vie des habitants de Cáceres. Elle affecterait également négativement le tourisme et l'environnement naturel entourant la ville.</span>
+                        </p>
+                        <p class="lead">
+                            <strong>
+                                <span class="lang lang-es">¡Únete al movimiento "No a la mina" y protege Cáceres!</span>
+                                <span class="lang lang-en d-none">Join the "No to the mine" movement and protect Cáceres!</span>
+                                <span class="lang lang-pt d-none">Junte-se ao movimento "Não à mina" e proteja Cáceres!</span>
+                                <span class="lang lang-fr d-none">Rejoignez le mouvement "Non à la mine" et protégez Cáceres !</span>
+                            </strong>
+                        </p>
+                        <div class="text-center">
+                            <a href="noMina.html" class="btn btn-danger">
+                                <span class="lang lang-es">Leer más</span>
+                                <span class="lang lang-en d-none">Read more</span>
+                                <span class="lang lang-pt d-none">Ler mais</span>
+                                <span class="lang lang-fr d-none">En savoir plus</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Sección Contacto -->
+        <section class="contact py-5">
+            <div class="container text-center">
+                <h2 class="text-danger mb-4">
+                    <span class="lang lang-es">Contáctanos</span>
+                    <span class="lang lang-en d-none">Contact us</span>
+                    <span class="lang lang-pt d-none">Contate-nos</span>
+                    <span class="lang lang-fr d-none">Contactez-nous</span>
+                </h2>
+                <p>
+                    <span class="lang lang-es">¿Tienes alguna pregunta o sugerencia? No dudes en ponerte en contacto con nosotros.</span>
+                    <span class="lang lang-en d-none">Do you have any questions or suggestions? Feel free to contact us.</span>
+                    <span class="lang lang-pt d-none">Tem alguma dúvida ou sugestão? Não hesite em nos contatar.</span>
+                    <span class="lang lang-fr d-none">Vous avez des questions ou des suggestions ? N'hésitez pas à nous contacter.</span>
+                </p>
+                <a href="contacto.html" class="btn btn-success">
+                    <span class="lang lang-es">Ir a la página de contacto</span>
+                    <span class="lang lang-en d-none">Go to contact page</span>
+                    <span class="lang lang-pt d-none">Ir para a página de contato</span>
+                    <span class="lang lang-fr d-none">Aller à la page de contact</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de alerta para búsqueda -->
+    <div class="modal fade" id="modalBusqueda" tabindex="-1" aria-labelledby="modalBusquedaLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-danger text-white">
+            <h5 class="modal-title" id="modalBusquedaLabel">
+                <span class="lang lang-es">Búsqueda</span>
+                <span class="lang lang-en d-none">Search</span>
+                <span class="lang lang-pt d-none">Busca</span>
+                <span class="lang lang-fr d-none">Recherche</span>
+            </h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body" id="modalBusquedaTexto">
+            <!-- Aquí se mostrará el mensaje -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                <span class="lang lang-es">Cerrar</span>
+                <span class="lang lang-en d-none">Close</span>
+                <span class="lang lang-pt d-none">Fechar</span>
+                <span class="lang lang-fr d-none">Fermer</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Creative commons -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span class="lang lang-es" property="dct:title">Ayuntamiento de Cáceres</span>
+        <span class="lang lang-en d-none" property="dct:title">Cáceres City Hall</span>
+        <span class="lang lang-pt d-none" property="dct:title">Prefeitura de Cáceres</span>
+        <span class="lang lang-fr d-none" property="dct:title">Mairie de Cáceres</span>
+        de <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/carolinarmuriel">Carolina Rodríguez Muriel</a>
+        tiene licencia <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer"
+        style="display:inline-block;">CC BY-NC-ND 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+        src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"  src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"
+        alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1"
+        alt=""></a></p>
+    </footer>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+   function cambiarIdioma(idioma) {
+        // Cambia el texto del botón
+        const btn = document.getElementById('languageDropdown');
+        if (idioma === 'es') btn.textContent = 'Español';
+        else if (idioma === 'en') btn.textContent = 'Inglés';
+        else if (idioma === 'pt') btn.textContent = 'Portugués';
+        else if (idioma === 'fr') btn.textContent = 'Francés';
+
+        // Oculta todos los idiomas
+        document.querySelectorAll('.lang').forEach(el => el.classList.add('d-none'));
+        // Muestra solo el idioma seleccionado
+        document.querySelectorAll('.lang-' + idioma).forEach(el => el.classList.remove('d-none'));
+
+        // Guarda el idioma en localStorage para mantenerlo al recargar
+        localStorage.setItem('idioma', idioma);
+
+        // Actualiza variable global lang para búsqueda
+        window.lang = idioma;
+    }
+
+    // Detecta idioma guardado o por URL
+    const urlParams = new URLSearchParams(window.location.search);
+    let lang = urlParams.get('lang') || localStorage.getItem('idioma') || 'es';
+    window.lang = lang;
+    cambiarIdioma(lang);
+
+    // Función de búsqueda con modal multilingüe
+    function buscar() {
+        const input = document.getElementById("searchInput").value.trim().toLowerCase();
+        if (!input) return;
+
+        const secciones = document.querySelectorAll('main section');
+        let encontrado = false;
+
+        secciones.forEach(section => {
+            section.style.boxShadow = '';
+            if (!encontrado && section.textContent.toLowerCase().includes(input)) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                section.style.boxShadow = '0 0 0 4px #C4A000';
+                section.style.transition = 'box-shadow 0.5s';
+                encontrado = true;
+                setTimeout(() => {
+                    section.style.boxShadow = '';
+                }, 2000);
+            }
+        });
+
+        if (!encontrado) {
+            let mensajes = {
+                es: 'No se encontró la palabra: ',
+                en: 'Word not found: ',
+                pt: 'Palavra não encontrada: ',
+                fr: 'Mot non trouvé : '
+            };
+            document.getElementById('modalBusquedaTexto').textContent = mensajes[window.lang] + input;
+            var modal = new bootstrap.Modal(document.getElementById('modalBusqueda'));
+            modal.show();
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Cultural de Cáceres</title>
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="agenda.css">
+    <link rel="icon" href="img/ayun.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="bg-danger text-white py-3">
+        <div class="container d-flex align-items-center">
+            <img src="img/ayun.png" alt="Logo del Ayuntamiento de Cáceres" class="logo me-3">
+            <h1 class="m-0">
+                <span class="lang lang-es">Ayuntamiento de Cáceres</span>
+                <span class="lang lang-en d-none">Cáceres City Hall</span>
+                <span class="lang lang-pt d-none">Prefeitura de Cáceres</span>
+                <span class="lang lang-fr d-none">Mairie de Cáceres</span>
+            </h1>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><span class="lang lang-es">Inicio</span><span class="lang lang-en d-none">Home</span><span class="lang lang-pt d-none">Início</span><span class="lang lang-fr d-none">Accueil</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="agenda.html"><span class="lang lang-es">Agenda Cultural</span><span class="lang lang-en d-none">Cultural Agenda</span><span class="lang lang-pt d-none">Agenda Cultural</span><span class="lang lang-fr d-none">Agenda Culturelle</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="turismo.html"><span class="lang lang-es">Turismo</span><span class="lang lang-en d-none">Tourism</span><span class="lang lang-pt d-none">Turismo</span><span class="lang lang-fr d-none">Tourisme</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="imagenes.html"><span class="lang lang-es">Imágenes</span><span class="lang lang-en d-none">Images</span><span class="lang lang-pt d-none">Imagens</span><span class="lang lang-fr d-none">Images</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="noMina.html"><span class="lang lang-es">No a la mina</span><span class="lang lang-en d-none">No to the mine</span><span class="lang lang-pt d-none">Não à mina</span><span class="lang lang-fr d-none">Non à la mine</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html"><span class="lang lang-es">Contacto</span><span class="lang lang-en d-none">Contact</span><span class="lang lang-pt d-none">Contato</span><span class="lang lang-fr d-none">Contact</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Barra de búsqueda -->
+        <div class="search-bar-container text-center my-4">
+            <input type="text" id="searchInput" placeholder="Buscar..." class="search-bar">
+            <button onclick="buscar()" class="search-button btn btn-primary">
+                <span class="lang lang-es">Buscar</span>
+                <span class="lang lang-en d-none">Search</span>
+                <span class="lang lang-pt d-none">Buscar</span>
+                <span class="lang lang-fr d-none">Rechercher</span>
+            </button>
+        </div>
+        <!-- Menú desplegable de idiomas -->
+        <div class="dropdown text-center my-4">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                Español
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('es')">Español</a></li>
+                <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('en')">Inglés</a></li>
+                <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('pt')">Portugués</a></li>
+                <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('fr')">Francés</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="container my-5">
+        <section>
+            <h2 class="text-center text-danger mb-4">
+                <span class="lang lang-es">Próximos Eventos</span>
+                <span class="lang lang-en d-none">Upcoming Events</span>
+                <span class="lang lang-pt d-none">Próximos Eventos</span>
+                <span class="lang lang-fr d-none">Événements à venir</span>
+            </h2>
+            <div class="event p-4 bg-light rounded shadow mb-4">
+                <h3 class="text-danger">
+                    <span class="lang lang-es">Candlelights</span>
+                    <span class="lang lang-en d-none">Candlelights</span>
+                    <span class="lang lang-pt d-none">Candlelights</span>
+                    <span class="lang lang-fr d-none">Candlelights</span>
+                </h3>
+                <p>
+                    <strong><span class="lang lang-es">Fecha:</span><span class="lang lang-en d-none">Date:</span><span class="lang lang-pt d-none">Data:</span><span class="lang lang-fr d-none">Date :</span></strong>
+                    <span class="lang lang-es">25 de abril de 2025</span>
+                    <span class="lang lang-en d-none">April 25, 2025</span>
+                    <span class="lang lang-pt d-none">25 de abril de 2025</span>
+                    <span class="lang lang-fr d-none">25 avril 2025</span>
+                </p>
+                <p>
+                    <strong><span class="lang lang-es">Ubicación:</span><span class="lang lang-en d-none">Location:</span><span class="lang lang-pt d-none">Localização:</span><span class="lang lang-fr d-none">Lieu :</span></strong>
+                    <span class="lang lang-es">Gran Teatro de Cáceres</span>
+                    <span class="lang lang-en d-none">Gran Teatro de Cáceres</span>
+                    <span class="lang lang-pt d-none">Gran Teatro de Cáceres</span>
+                    <span class="lang lang-fr d-none">Gran Teatro de Cáceres</span>
+                </p>
+                <div class="text-center mb-3">
+                    <img src="img/candlelights.jpg" alt="Candlelights" class="img-fluid rounded shadow">
+                </div>
+                <p>
+                    <span class="lang lang-es">Disfruta de una noche mágica con las mejores piezas de música clásica interpretadas por la Orquesta Sinfónica de Cáceres, en un ambiente íntimo iluminado por velas.</span>
+                    <span class="lang lang-en d-none">Enjoy a magical night with the best pieces of classical music performed by the Cáceres Symphony Orchestra, in an intimate candlelit setting.</span>
+                    <span class="lang lang-pt d-none">Desfrute de uma noite mágica com as melhores peças de música clássica interpretadas pela Orquestra Sinfônica de Cáceres, em um ambiente íntimo iluminado por velas.</span>
+                    <span class="lang lang-fr d-none">Profitez d'une nuit magique avec les meilleures œuvres de musique classique interprétées par l'Orchestre Symphonique de Cáceres, dans une ambiance intime éclairée à la bougie.</span>
+                </p>
+            </div>
+            <div class="event p-4 bg-light rounded shadow mb-4">
+                <h3 class="text-danger">
+                    <span class="lang lang-es">Exposición de Arte Contemporáneo</span>
+                    <span class="lang lang-en d-none">Contemporary Art Exhibition</span>
+                    <span class="lang lang-pt d-none">Exposição de Arte Contemporânea</span>
+                    <span class="lang lang-fr d-none">Exposition d'Art Contemporain</span>
+                </h3>
+                <p>
+                    <strong><span class="lang lang-es">Fecha:</span><span class="lang lang-en d-none">Date:</span><span class="lang lang-pt d-none">Data:</span><span class="lang lang-fr d-none">Date :</span></strong>
+                    <span class="lang lang-es">Del 20 al 30 de abril de 2025</span>
+                    <span class="lang lang-en d-none">April 20-30, 2025</span>
+                    <span class="lang lang-pt d-none">De 20 a 30 de abril de 2025</span>
+                    <span class="lang lang-fr d-none">Du 20 au 30 avril 2025</span>
+                </p>
+                <p>
+                    <strong><span class="lang lang-es">Ubicación:</span><span class="lang lang-en d-none">Location:</span><span class="lang lang-pt d-none">Localização:</span><span class="lang lang-fr d-none">Lieu :</span></strong>
+                    <span class="lang lang-es">Museo de Cáceres</span>
+                    <span class="lang lang-en d-none">Cáceres Museum</span>
+                    <span class="lang lang-pt d-none">Museu de Cáceres</span>
+                    <span class="lang lang-fr d-none">Musée de Cáceres</span>
+                </p>
+                <div class="text-center mb-3">
+                    <img src="img/arteContemporaneo.jpeg" alt="Exposición de Arte Contemporáneo" class="img-fluid rounded shadow">
+                </div>
+                <p>
+                    <span class="lang lang-es">Explora las obras de artistas locales e internacionales en esta fascinante exposición de arte contemporáneo.</span>
+                    <span class="lang lang-en d-none">Explore the works of local and international artists in this fascinating contemporary art exhibition.</span>
+                    <span class="lang lang-pt d-none">Explore as obras de artistas locais e internacionais nesta fascinante exposição de arte contemporânea.</span>
+                    <span class="lang lang-fr d-none">Découvrez les œuvres d'artistes locaux et internationaux dans cette fascinante exposition d'art contemporain.</span>
+                </p>
+            </div>
+            <div class="event p-4 bg-light rounded shadow mb-4">
+                <h3 class="text-danger">
+                    <span class="lang lang-es">Festival de Teatro</span>
+                    <span class="lang lang-en d-none">Theater Festival</span>
+                    <span class="lang lang-pt d-none">Festival de Teatro</span>
+                    <span class="lang lang-fr d-none">Festival de Théâtre</span>
+                </h3>
+                <p>
+                    <strong><span class="lang lang-es">Fecha:</span><span class="lang lang-en d-none">Date:</span><span class="lang lang-pt d-none">Data:</span><span class="lang lang-fr d-none">Date :</span></strong>
+                    <span class="lang lang-es">28 de abril de 2025</span>
+                    <span class="lang lang-en d-none">April 28, 2025</span>
+                    <span class="lang lang-pt d-none">28 de abril de 2025</span>
+                    <span class="lang lang-fr d-none">28 avril 2025</span>
+                </p>
+                <p>
+                    <strong><span class="lang lang-es">Ubicación:</span><span class="lang lang-en d-none">Location:</span><span class="lang lang-pt d-none">Localização:</span><span class="lang lang-fr d-none">Lieu :</span></strong>
+                    <span class="lang lang-es">Plaza Mayor de Cáceres</span>
+                    <span class="lang lang-en d-none">Plaza Mayor of Cáceres</span>
+                    <span class="lang lang-pt d-none">Plaza Mayor de Cáceres</span>
+                    <span class="lang lang-fr d-none">Plaza Mayor de Cáceres</span>
+                </p>
+                <div class="text-center mb-3">
+                    <img src="img/festivalTeatro.jpg" alt="Festival de Teatro" class="img-fluid rounded shadow">
+                </div>
+                <p>
+                    <span class="lang lang-es">Ven a disfrutar de una jornada llena de actuaciones teatrales al aire libre en el corazón de la ciudad.</span>
+                    <span class="lang lang-en d-none">Come and enjoy a day full of open-air theater performances in the heart of the city.</span>
+                    <span class="lang lang-pt d-none">Venha desfrutar de um dia cheio de apresentações teatrais ao ar livre no coração da cidade.</span>
+                    <span class="lang lang-fr d-none">Venez profiter d'une journée pleine de spectacles de théâtre en plein air au cœur de la ville.</span>
+                </p>
+            </div>
+            <div class="event p-4 bg-light rounded shadow">
+                <h3 class="text-danger">
+                    <span class="lang lang-es">Extremúsika</span>
+                    <span class="lang lang-en d-none">Extremúsika</span>
+                    <span class="lang lang-pt d-none">Extremúsika</span>
+                    <span class="lang lang-fr d-none">Extremúsika</span>
+                </h3>
+                <p>
+                    <strong><span class="lang lang-es">Fecha:</span><span class="lang lang-en d-none">Date:</span><span class="lang lang-pt d-none">Data:</span><span class="lang lang-fr d-none">Date :</span></strong>
+                    <span class="lang lang-es">Del 1 al 3 de mayo de 2025</span>
+                    <span class="lang lang-en d-none">May 1-3, 2025</span>
+                    <span class="lang lang-pt d-none">De 1 a 3 de maio de 2025</span>
+                    <span class="lang lang-fr d-none">Du 1er au 3 mai 2025</span>
+                </p>
+                <p>
+                    <strong><span class="lang lang-es">Ubicación:</span><span class="lang lang-en d-none">Location:</span><span class="lang lang-pt d-none">Localização:</span><span class="lang lang-fr d-none">Lieu :</span></strong>
+                    <span class="lang lang-es">Recinto Hípico de Cáceres</span>
+                    <span class="lang lang-en d-none">Cáceres Equestrian Venue</span>
+                    <span class="lang lang-pt d-none">Recinto Hípico de Cáceres</span>
+                    <span class="lang lang-fr d-none">Recinto Hípico de Cáceres</span>
+                </p>
+                <div class="text-center mb-3">
+                    <img src="img/extremusica.jpg" alt="Extremúsika" class="img-fluid rounded shadow">
+                </div>
+                <p>
+                    <span class="lang lang-es">Vive la experiencia del festival de música más grande de Extremadura, con artistas nacionales e internacionales de diversos géneros musicales.</span>
+                    <span class="lang lang-en d-none">Experience the largest music festival in Extremadura, with national and international artists from various musical genres.</span>
+                    <span class="lang lang-pt d-none">Viva a experiência do maior festival de música da Extremadura, com artistas nacionais e internacionais de diversos gêneros musicais.</span>
+                    <span class="lang lang-fr d-none">Vivez l'expérience du plus grand festival de musique d'Estrémadure, avec des artistes nationaux et internationaux de divers genres musicaux.</span>
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-dark text-white text-center py-3">
+        <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
+            <span class="lang lang-es" property="dct:title">Ayuntamiento de Cáceres</span>
+            <span class="lang lang-en d-none" property="dct:title">Cáceres City Hall</span>
+            <span class="lang lang-pt d-none" property="dct:title">Prefeitura de Cáceres</span>
+            <span class="lang lang-fr d-none" property="dct:title">Mairie de Cáceres</span>
+            de <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/carolinarmuriel">Carolina Rodríguez Muriel</a>
+            tiene licencia <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer"
+            style="display:inline-block;">CC BY-NC-ND 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+            src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"  src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"
+            alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1"
+            alt=""></a>
+        </p>
+    </footer>
+
+    <!-- Modal de alerta para búsqueda -->
+    <div class="modal fade" id="modalBusqueda" tabindex="-1" aria-labelledby="modalBusquedaLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-danger text-white">
+            <h5 class="modal-title" id="modalBusquedaLabel">
+                <span class="lang lang-es">Búsqueda</span>
+                <span class="lang lang-en d-none">Search</span>
+                <span class="lang lang-pt d-none">Busca</span>
+                <span class="lang lang-fr d-none">Recherche</span>
+            </h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body" id="modalBusquedaTexto">
+            <!-- Aquí se mostrará el mensaje -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                <span class="lang lang-es">Cerrar</span>
+                <span class="lang lang-en d-none">Close</span>
+                <span class="lang lang-pt d-none">Fechar</span>
+                <span class="lang lang-fr d-none">Fermer</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    function cambiarIdioma(idioma) {
+        // Cambia el texto del botón
+        const btn = document.getElementById('languageDropdown');
+        if (idioma === 'es') btn.textContent = 'Español';
+        else if (idioma === 'en') btn.textContent = 'Inglés';
+        else if (idioma === 'pt') btn.textContent = 'Portugués';
+        else if (idioma === 'fr') btn.textContent = 'Francés';
+
+        // Oculta todos los idiomas
+        document.querySelectorAll('.lang').forEach(el => el.classList.add('d-none'));
+        // Muestra solo el idioma seleccionado
+        document.querySelectorAll('.lang-' + idioma).forEach(el => el.classList.remove('d-none'));
+
+        // Guarda el idioma en localStorage para mantenerlo al recargar
+        localStorage.setItem('idioma', idioma);
+
+        // Actualiza variable global lang para búsqueda
+        window.lang = idioma;
+    }
+
+    // Detecta idioma guardado o por URL
+    const urlParams = new URLSearchParams(window.location.search);
+    let lang = urlParams.get('lang') || localStorage.getItem('idioma') || 'es';
+    window.lang = lang;
+    cambiarIdioma(lang);
+
+    // Función de búsqueda con resaltado y mensaje multilingüe
+    function buscar() {
+        const input = document.getElementById("searchInput").value.trim().toLowerCase();
+        if (!input) return;
+
+        const eventos = document.querySelectorAll('.event');
+        let encontrado = false;
+
+        eventos.forEach(evento => {
+            evento.style.boxShadow = '';
+            if (!encontrado && evento.textContent.toLowerCase().includes(input)) {
+                evento.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                evento.style.boxShadow = '0 0 0 4px #C4A000';
+                evento.style.transition = 'box-shadow 0.5s';
+                encontrado = true;
+                setTimeout(() => {
+                    evento.style.boxShadow = '';
+                }, 2000);
+            }
+        });
+
+        if (!encontrado) {
+            let mensajes = {
+                es: 'No se encontró la palabra: ',
+                en: 'Word not found: ',
+                pt: 'Palavra não encontrada: ',
+                fr: 'Mot non trouvé : '
+            };
+            document.getElementById('modalBusquedaTexto').textContent = mensajes[window.lang] + input;
+            var modal = new bootstrap.Modal(document.getElementById('modalBusqueda'));
+            modal.show();
+        }
+    }
+    </script>
+</body>
+</html>

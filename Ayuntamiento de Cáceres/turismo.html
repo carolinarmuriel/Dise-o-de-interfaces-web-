@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciudad Monumental de Cáceres</title>
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="turismo.css">
+    <link rel="icon" href="img/ayun.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="bg-danger text-white py-3">
+        <div class="container d-flex align-items-center">
+            <img src="img/ayun.png" alt="Logo del Ayuntamiento de Cáceres" class="logo me-3">
+            <h1 class="m-0">
+                <span class="lang lang-es">Ayuntamiento de Cáceres</span>
+                <span class="lang lang-en d-none">Cáceres City Hall</span>
+                <span class="lang lang-pt d-none">Prefeitura de Cáceres</span>
+                <span class="lang lang-fr d-none">Mairie de Cáceres</span>
+            </h1>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><span class="lang lang-es">Inicio</span><span class="lang lang-en d-none">Home</span><span class="lang lang-pt d-none">Início</span><span class="lang lang-fr d-none">Accueil</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="agenda.html"><span class="lang lang-es">Agenda Cultural</span><span class="lang lang-en d-none">Cultural Agenda</span><span class="lang lang-pt d-none">Agenda Cultural</span><span class="lang lang-fr d-none">Agenda Culturelle</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="turismo.html"><span class="lang lang-es">Turismo</span><span class="lang lang-en d-none">Tourism</span><span class="lang lang-pt d-none">Turismo</span><span class="lang lang-fr d-none">Tourisme</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="imagenes.html"><span class="lang lang-es">Imágenes</span><span class="lang lang-en d-none">Images</span><span class="lang lang-pt d-none">Imagens</span><span class="lang lang-fr d-none">Images</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="noMina.html"><span class="lang lang-es">No a la mina</span><span class="lang lang-en d-none">No to the mine</span><span class="lang lang-pt d-none">Não à mina</span><span class="lang lang-fr d-none">Non à la mine</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html"><span class="lang lang-es">Contacto</span><span class="lang lang-en d-none">Contact</span><span class="lang lang-pt d-none">Contato</span><span class="lang lang-fr d-none">Contact</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Barra de búsqueda -->
+        <div class="search-bar-container text-center my-4">
+            <input type="text" id="searchInput" placeholder="Buscar..." class="search-bar">
+            <button onclick="buscar()" class="search-button btn btn-primary">
+                <span class="lang lang-es">Buscar</span>
+                <span class="lang lang-en d-none">Search</span>
+                <span class="lang lang-pt d-none">Buscar</span>
+                <span class="lang lang-fr d-none">Rechercher</span>
+            </button>
+        </div>
+        <!-- Menú desplegable de idiomas -->
+        <div class="dropdown text-center my-4">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                Español
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('es')">Español</a></li>
+                <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('en')">Inglés</a></li>
+                <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('pt')">Portugués</a></li>
+                <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('fr')">Francés</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="container my-5">
+        <section class="text-center">
+            <h2 class="mb-4">
+                <span class="lang lang-es">Ciudad Monumental de Cáceres</span>
+                <span class="lang lang-en d-none">Monumental City of Cáceres</span>
+                <span class="lang lang-pt d-none">Cidade Monumental de Cáceres</span>
+                <span class="lang lang-fr d-none">Ville Monumentale de Cáceres</span>
+            </h2>
+            <p class="lead">
+                <span class="lang lang-es">La Ciudad Monumental de Cáceres es un conjunto histórico único, declarado Patrimonio de la Humanidad por la UNESCO en 1986. Sus calles empedradas, palacios, iglesias y murallas te transportarán a la época medieval.</span>
+                <span class="lang lang-en d-none">The Monumental City of Cáceres is a unique historical complex, declared a UNESCO World Heritage Site in 1986. Its cobbled streets, palaces, churches, and walls will transport you to medieval times.</span>
+                <span class="lang lang-pt d-none">A Cidade Monumental de Cáceres é um conjunto histórico único, declarado Patrimônio Mundial da UNESCO em 1986. Suas ruas de paralelepípedos, palácios, igrejas e muralhas o transportarão à época medieval.</span>
+                <span class="lang lang-fr d-none">La Ville Monumentale de Cáceres est un ensemble historique unique, classé au patrimoine mondial de l'UNESCO en 1986. Ses rues pavées, ses palais, ses églises et ses remparts vous transporteront à l'époque médiévale.</span>
+            </p>
+            <!-- Aquí puedes seguir traduciendo los títulos y textos principales de las secciones si lo deseas -->
+            <!-- ...resto del contenido igual... -->
+        </section>
+        <!-- ...resto de secciones igual, puedes traducir los títulos y textos principales usando el patrón multilingüe... -->
+        <!-- NO A LA MINA -->
+        <section class="my-5">
+            <h2 class="text-center mb-4">
+                <span class="lang lang-es">No a la mina de Cáceres</span>
+                <span class="lang lang-en d-none">No to the Cáceres mine</span>
+                <span class="lang lang-pt d-none">Não à mina de Cáceres</span>
+                <span class="lang lang-fr d-none">Non à la mine de Cáceres</span>
+            </h2>
+            <p class="lead text-center">
+                <span class="lang lang-es">La ciudad de Cáceres y sus habitantes han mostrado una firme oposición al proyecto de minería en la región. Este proyecto amenaza el patrimonio natural, cultural y social de una ciudad declarada Patrimonio de la Humanidad por la UNESCO.</span>
+                <span class="lang lang-en d-none">The city of Cáceres and its inhabitants have shown strong opposition to the mining project in the region. This project threatens the natural, cultural, and social heritage of a city declared a UNESCO World Heritage Site.</span>
+                <span class="lang lang-pt d-none">A cidade de Cáceres e seus habitantes mostraram forte oposição ao projeto de mineração na região. Este projeto ameaça o patrimônio natural, cultural e social de uma cidade declarada Patrimônio Mundial da UNESCO.</span>
+                <span class="lang lang-fr d-none">La ville de Cáceres et ses habitants ont manifesté une forte opposition au projet minier dans la région. Ce projet menace le patrimoine naturel, culturel et social d'une ville classée au patrimoine mondial de l'UNESCO.</span>
+            </p>
+            <div class="text-center mb-4">
+                <img src="img/noMina.jpg" alt="No a la mina de Cáceres" class="img-fluid rounded shadow">
+            </div>
+            <p class="lead text-center">
+                <span class="lang lang-es">La mina a cielo abierto pondría en peligro los recursos hídricos, la biodiversidad y la calidad de vida de los cacereños. Además, afectaría negativamente al turismo y al entorno natural que rodea la ciudad.</span>
+                <span class="lang lang-en d-none">The open-pit mine would endanger water resources, biodiversity, and the quality of life of the people of Cáceres. It would also negatively affect tourism and the natural environment surrounding the city.</span>
+                <span class="lang lang-pt d-none">A mina a céu aberto colocaria em risco os recursos hídricos, a biodiversidade e a qualidade de vida dos habitantes de Cáceres. Além disso, afetaria negativamente o turismo e o ambiente natural que rodeia a cidade.</span>
+                <span class="lang lang-fr d-none">La mine à ciel ouvert mettrait en danger les ressources en eau, la biodiversité et la qualité de vie des habitants de Cáceres. Elle affecterait également négativement le tourisme et l'environnement naturel entourant la ville.</span>
+            </p>
+            <p class="text-center">
+                <strong>
+                    <span class="lang lang-es">¡Únete al movimiento "No a la mina" y protege Cáceres!</span>
+                    <span class="lang lang-en d-none">Join the "No to the mine" movement and protect Cáceres!</span>
+                    <span class="lang lang-pt d-none">Junte-se ao movimento "Não à mina" e proteja Cáceres!</span>
+                    <span class="lang lang-fr d-none">Rejoignez le mouvement "Non à la mine" et protégez Cáceres !</span>
+                </strong>
+            </p>
+        </section>
+        <!-- Semana Santa de Cáceres -->
+        <section class="my-5">
+            <h2 class="text-center mb-4">
+                <span class="lang lang-es">Semana Santa de Cáceres</span>
+                <span class="lang lang-en d-none">Holy Week in Cáceres</span>
+                <span class="lang lang-pt d-none">Semana Santa de Cáceres</span>
+                <span class="lang lang-fr d-none">Semaine Sainte de Cáceres</span>
+            </h2>
+            <p class="lead text-center">
+                <span class="lang lang-es">La Semana Santa de Cáceres es una de las celebraciones más importantes y tradicionales de la ciudad, declarada de Interés Turístico Internacional. Sus procesiones recorren el casco histórico, creando un ambiente único de recogimiento y belleza monumental.</span>
+                <span class="lang lang-en d-none">Holy Week in Cáceres is one of the city's most important and traditional celebrations, declared of International Tourist Interest. Its processions go through the historic center, creating a unique atmosphere of solemnity and monumental beauty.</span>
+                <span class="lang lang-pt d-none">A Semana Santa de Cáceres é uma das celebrações mais importantes e tradicionais da cidade, declarada de Interesse Turístico Internacional. Suas procissões percorrem o centro histórico, criando um ambiente único de recolhimento e beleza monumental.</span>
+                <span class="lang lang-fr d-none">La Semaine Sainte de Cáceres est l'une des célébrations les plus importantes et traditionnelles de la ville, déclarée d'intérêt touristique international. Ses processions traversent le centre historique, créant une atmosphère unique de recueillement et de beauté monumentale.</span>
+            </p>
+          
+<div class="text-center">
+
+    <iframe
+        width="480" 
+        height="270" 
+        class="rounded shadow mt-3"
+        src="https://www.youtube.com/embed/bkXFP7AlcoU" 
+        title="Semana Santa de Cáceres"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+    </iframe>
+</div>
+                <p class="mt-3 text-muted" style="max-width:480px;margin:auto;">
+                    <strong>
+                        <span class="lang lang-es">Transcripción del vídeo:</span>
+                        <span class="lang lang-en d-none">Video transcript:</span>
+                        <span class="lang lang-pt d-none">Transcrição do vídeo:</span>
+                        <span class="lang lang-fr d-none">Transcription de la vidéo :</span>
+                    </strong><br>
+                    <span style="font-size:0.95em;">
+                        <span class="lang lang-es">[Música solemne]<br>
+                        La Virgen recorre las calles del casco antiguo de Cáceres durante la Semana Santa, acompañada por fieles y cofradías. El silencio y el respeto llenan el ambiente mientras la procesión avanza entre los monumentos históricos de la ciudad.<br>
+                        [Aplausos y sonidos de campanas]</span>
+                        <span class="lang lang-en d-none">[Solemn music]<br>
+                        The Virgin walks through the streets of Cáceres' old town during Holy Week, accompanied by devotees and brotherhoods. Silence and respect fill the atmosphere as the procession moves among the city's historic monuments.<br>
+                        [Applause and bell sounds]</span>
+                        <span class="lang lang-pt d-none">[Música solene]<br>
+                        A Virgem percorre as ruas do centro histórico de Cáceres durante a Semana Santa, acompanhada por fiéis e confrarias. O silêncio e o respeito preenchem o ambiente enquanto a procissão avança entre os monumentos históricos da cidade.<br>
+                        [Aplausos e sons de sinos]</span>
+                        <span class="lang lang-fr d-none">[Musique solennelle]<br>
+                        La Vierge parcourt les rues du centre historique de Cáceres pendant la Semaine Sainte, accompagnée de fidèles et de confréries. Le silence et le respect emplissent l'atmosphère tandis que la procession avance parmi les monuments historiques de la ville.<br>
+                        [Applaudissements et sons de cloches]</span>
+                    </span>
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-dark text-white text-center py-3">
+        <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
+            <span class="lang lang-es" property="dct:title">Ayuntamiento de Cáceres</span>
+            <span class="lang lang-en d-none" property="dct:title">Cáceres City Hall</span>
+            <span class="lang lang-pt d-none" property="dct:title">Prefeitura de Cáceres</span>
+            <span class="lang lang-fr d-none" property="dct:title">Mairie de Cáceres</span>
+            de <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/carolinarmuriel">Carolina Rodríguez Muriel</a>
+            tiene licencia <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer"
+            style="display:inline-block;">CC BY-NC-ND 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+            src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"  src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"
+            alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1"
+            alt=""></a>
+        </p>
+    </footer>
+
+    <!-- Modal de alerta para búsqueda -->
+    <div class="modal fade" id="modalBusqueda" tabindex="-1" aria-labelledby="modalBusquedaLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-danger text-white">
+            <h5 class="modal-title" id="modalBusquedaLabel">
+                <span class="lang lang-es">Búsqueda</span>
+                <span class="lang lang-en d-none">Search</span>
+                <span class="lang lang-pt d-none">Busca</span>
+                <span class="lang lang-fr d-none">Recherche</span>
+            </h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body" id="modalBusquedaTexto">
+            <!-- Aquí se mostrará el mensaje -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                <span class="lang lang-es">Cerrar</span>
+                <span class="lang lang-en d-none">Close</span>
+                <span class="lang lang-pt d-none">Fechar</span>
+                <span class="lang lang-fr d-none">Fermer</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    function cambiarIdioma(idioma) {
+        // Cambia el texto del botón
+        const btn = document.getElementById('languageDropdown');
+        if (idioma === 'es') btn.textContent = 'Español';
+        else if (idioma === 'en') btn.textContent = 'Inglés';
+        else if (idioma === 'pt') btn.textContent = 'Portugués';
+        else if (idioma === 'fr') btn.textContent = 'Francés';
+
+        // Oculta todos los idiomas
+        document.querySelectorAll('.lang').forEach(el => el.classList.add('d-none'));
+        // Muestra solo el idioma seleccionado
+        document.querySelectorAll('.lang-' + idioma).forEach(el => el.classList.remove('d-none'));
+
+        // Guarda el idioma en localStorage para mantenerlo al recargar
+        localStorage.setItem('idioma', idioma);
+
+        // Actualiza variable global lang para búsqueda
+        window.lang = idioma;
+    }
+
+    // Detecta idioma guardado o por URL
+    const urlParams = new URLSearchParams(window.location.search);
+    let lang = urlParams.get('lang') || localStorage.getItem('idioma') || 'es';
+    window.lang = lang;
+    cambiarIdioma(lang);
+
+    // Función de búsqueda con resaltado y mensaje multilingüe
+    function buscar() {
+        const input = document.getElementById("searchInput").value.trim().toLowerCase();
+        if (!input) return;
+
+        // Busca en todas las secciones principales
+        const secciones = document.querySelectorAll('main section');
+        let encontrado = false;
+
+        secciones.forEach(section => {
+            section.style.boxShadow = '';
+            if (!encontrado && section.textContent.toLowerCase().includes(input)) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                section.style.boxShadow = '0 0 0 4px #C4A000';
+                section.style.transition = 'box-shadow 0.5s';
+                encontrado = true;
+                setTimeout(() => {
+                    section.style.boxShadow = '';
+                }, 2000);
+            }
+        });
+
+        if (!encontrado) {
+            let mensajes = {
+                es: 'No se encontró la palabra: ',
+                en: 'Word not found: ',
+                pt: 'Palavra não encontrada: ',
+                fr: 'Mot non trouvé : '
+            };
+            document.getElementById('modalBusquedaTexto').textContent = mensajes[window.lang] + input;
+            var modal = new bootstrap.Modal(document.getElementById('modalBusqueda'));
+            modal.show();
+        }
+    }
+    </script>
+</body>
+</html>

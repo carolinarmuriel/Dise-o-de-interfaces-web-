@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="contacto.css">
+    <link rel="icon" href="img/ayun.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="bg-danger text-white py-3">
+        <div class="container d-flex align-items-center">
+            <img src="img/ayun.png" alt="Logo del Ayuntamiento de Cáceres" class="logo me-3">
+            <h1 class="m-0">
+                <span class="lang lang-es">Ayuntamiento de Cáceres</span>
+                <span class="lang lang-en d-none">Cáceres City Hall</span>
+                <span class="lang lang-pt d-none">Prefeitura de Cáceres</span>
+                <span class="lang lang-fr d-none">Mairie de Cáceres</span>
+            </h1>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><span class="lang lang-es">Inicio</span><span class="lang lang-en d-none">Home</span><span class="lang lang-pt d-none">Início</span><span class="lang lang-fr d-none">Accueil</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="agenda.html"><span class="lang lang-es">Agenda Cultural</span><span class="lang lang-en d-none">Cultural Agenda</span><span class="lang lang-pt d-none">Agenda Cultural</span><span class="lang lang-fr d-none">Agenda Culturelle</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="turismo.html"><span class="lang lang-es">Turismo</span><span class="lang lang-en d-none">Tourism</span><span class="lang lang-pt d-none">Turismo</span><span class="lang lang-fr d-none">Tourisme</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="imagenes.html"><span class="lang lang-es">Imágenes</span><span class="lang lang-en d-none">Images</span><span class="lang lang-pt d-none">Imagens</span><span class="lang lang-fr d-none">Images</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="noMina.html"><span class="lang lang-es">No a la mina</span><span class="lang lang-en d-none">No to the mine</span><span class="lang lang-pt d-none">Não à mina</span><span class="lang lang-fr d-none">Non à la mine</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contacto.html"><span class="lang lang-es">Contacto</span><span class="lang lang-en d-none">Contact</span><span class="lang lang-pt d-none">Contato</span><span class="lang lang-fr d-none">Contact</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Barra de búsqueda -->
+        <div class="search-bar-container text-center my-4">
+            <input type="text" id="searchInput" placeholder="Buscar..." class="search-bar">
+            <button onclick="buscar()" class="search-button btn btn-primary">
+                <span class="lang lang-es">Buscar</span>
+                <span class="lang lang-en d-none">Search</span>
+                <span class="lang lang-pt d-none">Buscar</span>
+                <span class="lang lang-fr d-none">Rechercher</span>
+            </button>
+        </div>
+        <!-- Menú desplegable de idiomas -->
+        <div class="dropdown text-center my-4">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                Español
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('es')">Español</a></li>
+                <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('en')">Inglés</a></li>
+                <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('pt')">Portugués</a></li>
+                <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('fr')">Francés</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="container my-5">
+        <section class="contact-info text-center">
+            <h2>
+                <span class="lang lang-es">Contáctanos</span>
+                <span class="lang lang-en d-none">Contact us</span>
+                <span class="lang lang-pt d-none">Contate-nos</span>
+                <span class="lang lang-fr d-none">Contactez-nous</span>
+            </h2>
+            <p>
+                <span class="lang lang-es">Si tienes alguna consulta, no dudes en ponerte en contacto con nosotros:</span>
+                <span class="lang lang-en d-none">If you have any questions, feel free to contact us:</span>
+                <span class="lang lang-pt d-none">Se tiver alguma dúvida, não hesite em nos contactar:</span>
+                <span class="lang lang-fr d-none">Si vous avez des questions, n'hésitez pas à nous contacter :</span>
+            </p>
+            <ul class="list-unstyled mb-4">
+                <li><strong><span class="lang lang-es">Dirección:</span><span class="lang lang-en d-none">Address:</span><span class="lang lang-pt d-none">Endereço:</span><span class="lang lang-fr d-none">Adresse :</span></strong> Plaza Mayor, Cáceres, España</li>
+                <li><strong><span class="lang lang-es">Teléfono:</span><span class="lang lang-en d-none">Phone:</span><span class="lang lang-pt d-none">Telefone:</span><span class="lang lang-fr d-none">Téléphone :</span></strong> +34 927 000 000</li>
+                <li><strong><span class="lang lang-es">Email:</span><span class="lang lang-en d-none">Email:</span><span class="lang lang-pt d-none">E-mail:</span><span class="lang lang-fr d-none">E-mail :</span></strong> info@ayto-caceres.es</li>
+            </ul>
+            <h3>
+                <span class="lang lang-es">Formulario de Contacto</span>
+                <span class="lang lang-en d-none">Contact Form</span>
+                <span class="lang lang-pt d-none">Formulário de Contato</span>
+                <span class="lang lang-fr d-none">Formulaire de Contact</span>
+            </h3>
+            <form action="#" method="post" class="mx-auto" style="max-width: 600px;">
+                <div class="mb-3 text-start">
+                    <label for="name" class="form-label">
+                        <span class="lang lang-es">Nombre:</span>
+                        <span class="lang lang-en d-none">Name:</span>
+                        <span class="lang lang-pt d-none">Nome:</span>
+                        <span class="lang lang-fr d-none">Nom :</span>
+                    </label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+                <div class="mb-3 text-start">
+                    <label for="email" class="form-label">
+                        <span class="lang lang-es">Correo Electrónico:</span>
+                        <span class="lang lang-en d-none">Email:</span>
+                        <span class="lang lang-pt d-none">E-mail:</span>
+                        <span class="lang lang-fr d-none">E-mail :</span>
+                    </label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="mb-3 text-start">
+                    <label for="message" class="form-label">
+                        <span class="lang lang-es">Mensaje:</span>
+                        <span class="lang lang-en d-none">Message:</span>
+                        <span class="lang lang-pt d-none">Mensagem:</span>
+                        <span class="lang lang-fr d-none">Message :</span>
+                    </label>
+                    <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">
+                    <span class="lang lang-es">Enviar</span>
+                    <span class="lang lang-en d-none">Send</span>
+                    <span class="lang lang-pt d-none">Enviar</span>
+                    <span class="lang lang-fr d-none">Envoyer</span>
+                </button>
+            </form>
+        </section>
+    </main>
+    <footer class="bg-dark text-white text-center py-3">
+        <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
+            <span class="lang lang-es" property="dct:title">Ayuntamiento de Cáceres</span>
+            <span class="lang lang-en d-none" property="dct:title">Cáceres City Hall</span>
+            <span class="lang lang-pt d-none" property="dct:title">Prefeitura de Cáceres</span>
+            <span class="lang lang-fr d-none" property="dct:title">Mairie de Cáceres</span>
+            de <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/carolinarmuriel">Carolina Rodríguez Muriel</a>
+            tiene licencia <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer"
+            style="display:inline-block;">CC BY-NC-ND 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+            src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"  src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"
+            alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1"
+            alt=""></a>
+        </p>
+    </footer>
+    <!-- Modal de alerta para búsqueda -->
+    <div class="modal fade" id="modalBusqueda" tabindex="-1" aria-labelledby="modalBusquedaLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-danger text-white">
+            <h5 class="modal-title" id="modalBusquedaLabel">
+                <span class="lang lang-es">Búsqueda</span>
+                <span class="lang lang-en d-none">Search</span>
+                <span class="lang lang-pt d-none">Busca</span>
+                <span class="lang lang-fr d-none">Recherche</span>
+            </h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body" id="modalBusquedaTexto">
+            <!-- Aquí se mostrará el mensaje -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                <span class="lang lang-es">Cerrar</span>
+                <span class="lang lang-en d-none">Close</span>
+                <span class="lang lang-pt d-none">Fechar</span>
+                <span class="lang lang-fr d-none">Fermer</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    function cambiarIdioma(idioma) {
+        // Cambia el texto del botón
+        const btn = document.getElementById('languageDropdown');
+        if (idioma === 'es') btn.textContent = 'Español';
+        else if (idioma === 'en') btn.textContent = 'Inglés';
+        else if (idioma === 'pt') btn.textContent = 'Portugués';
+        else if (idioma === 'fr') btn.textContent = 'Francés';
+
+        // Oculta todos los idiomas
+        document.querySelectorAll('.lang').forEach(el => el.classList.add('d-none'));
+        // Muestra solo el idioma seleccionado
+        document.querySelectorAll('.lang-' + idioma).forEach(el => el.classList.remove('d-none'));
+
+        // Guarda el idioma en localStorage para mantenerlo al recargar
+        localStorage.setItem('idioma', idioma);
+
+        // Actualiza variable global lang para búsqueda
+        window.lang = idioma;
+    }
+
+    // Detecta idioma guardado o por URL
+    const urlParams = new URLSearchParams(window.location.search);
+    let lang = urlParams.get('lang') || localStorage.getItem('idioma') || 'es';
+    window.lang = lang;
+    cambiarIdioma(lang);
+
+    // Función de búsqueda con resaltado y mensaje multilingüe
+    function buscar() {
+        const input = document.getElementById("searchInput").value.trim().toLowerCase();
+        if (!input) return;
+
+        // Busca en los títulos y textos principales
+        const textos = document.querySelectorAll('main h2, main h3, main p, main li, main label');
+        let encontrado = false;
+
+        textos.forEach(el => {
+            el.style.boxShadow = '';
+            if (!encontrado && el.textContent.toLowerCase().includes(input)) {
+                el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                el.style.boxShadow = '0 0 0 4px #C4A000';
+                el.style.transition = 'box-shadow 0.5s';
+                encontrado = true;
+                setTimeout(() => {
+                    el.style.boxShadow = '';
+                }, 2000);
+            }
+        });
+
+        if (!encontrado) {
+            let mensajes = {
+                es: 'No se encontró la palabra: ',
+                en: 'Word not found: ',
+                pt: 'Palavra não encontrada: ',
+                fr: 'Mot non trouvé : '
+            };
+            document.getElementById('modalBusquedaTexto').textContent = mensajes[window.lang] + input;
+            var modal = new bootstrap.Modal(document.getElementById('modalBusqueda'));
+            modal.show();
+        }
+    }
+    </script>
+</body>
+</html>
